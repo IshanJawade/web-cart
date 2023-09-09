@@ -5,6 +5,7 @@ import Blogs from "./screens/Blogs";
 import Home from "./screens/Home";
 import Login from "./screens/Login";
 import Cart from "./screens/Cart";
+import ContactUs from "./screens/ContactUs";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/blogs" element= {<Blogs /> } />
           <Route exact path="/login" element= {<Login /> } />
           <Route exact path="/cart" element= {<Cart/> } />
+          <Route exact path="/contact" element= {<ContactUs/> } />
         </Routes>
       </Router>
     </>
