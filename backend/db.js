@@ -11,7 +11,7 @@ const mongoDB = async () => {
                 const fetched_data = mongoose.connection.db.collection("users");
                 fetched_data.find({}).toArray(function (err, data){
                     if(err) console.log(err);
-                    else console.log(data); 
+                    else console.log(); 
                 })
             }
         }
