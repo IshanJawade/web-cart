@@ -5,7 +5,7 @@ export default function Navbar() {
     <>
     <nav className="navbar navbar-expand-lg navbar bg-primary" data-bs-theme="dark">
         <div className="container-fluid">
-          <Link className="navbar-brand fs-1" to="/"> Puppy's </Link>
+          <Link className="navbar-brand fs-1" to="/">WebkART</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -16,6 +16,9 @@ export default function Navbar() {
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/login">Login</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/signup">SignUp</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/cart">Cart</Link>

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { Schema } = monsgoose;
+const { Schema } = mongoose;
 
 const UserSchema = new Schema({
     name: {

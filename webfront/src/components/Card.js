@@ -1,25 +1,22 @@
-import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 
 
-export default function Card({ImagePath, CardTitle, CardText}) {
+export default function Card() {
   return (
     <>
-        <div className="col-md-4 mb-4">
-                <div className="card">
-                    <img
-                    src={ImagePath} // Replace with the actual image URL
-                    className="card-img-top"
-                    alt="Artwork 1"
-                    />
+       <div>
+            <div className="card m-3" style={{width: "18rem"}}>
+                <img className="card-img-top" src="https://source.unsplash.com/random/286x180/?painting" alt=" "/>
                     <div className="card-body">
-                        <h5 className="card-title">{CardTitle}</h5>
-                        <p className="card-text">{CardText}</p>
-                        <a href="/product/1" className="btn btn-primary">
-                            View Details
-                        </a>
+                        <h5 className="card-title">Card title</h5>
+                        <p className="card-text">Description about this card item</p>
+                        <div className="container w-100 ">
+                            <h5>Total Price</h5>
+                            <button className="btn btn-primary m-2 rounded">Buy</button>
+                            <button className="btn btn-primary m-2 rounded">Add to Cart</button>
+                        </div>
                     </div>
-                </div>
+            </div>
         </div>
     </>
   )

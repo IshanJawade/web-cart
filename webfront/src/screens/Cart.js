@@ -11,9 +11,9 @@ function Cart() {
 
   const [total, setTotal] = useState(0);
 
-  const addToCart = (item) => {
-    setCartItems([...cartItems, item]);
-  };
+  // const addToCart = (item) => {
+  //   setCartItems([...cartItems, item]);
+  // };
 
   const removeFromCart = (id) => {
     const updatedCart = cartItems.filter((item) => item.id !== id);

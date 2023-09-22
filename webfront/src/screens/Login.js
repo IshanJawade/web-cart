@@ -1,102 +1,54 @@
 import React, { useState } from 'react';
-import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
+import { Link } from 'react-router-dom';
 
+export default function Login() {
+    const [creds, setCreds] = useState({email:"", password:""});
 
-function Login() {
-  const [isSignIn, setIsSignIn] = useState(true);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const response = await fetch("http://localhost:5000/api/login", {
+            method:'POST',
+            headers:{
+                'Content-type': 'application/json'
+            },
+            body:JSON.stringify({email:creds.email, password:creds.password})
+        });
+        const json = await response.json();
+        console.log(json);
 
-  const toggleAuthMode = () => {
-    setIsSignIn(!isSignIn);
-  };
+        if(!json.success){
+            alert("Enter Valid Credentials")
+        }
 
-  return (
-    <>
-        <div><Navbar /></div>
-        <div>Login Page</div>
-        <div className="container mt-5">
-            <div className="row justify-content-center">
-                <div className="col-md-6">
-                <div className="card">
-                    <div className="card-header">
-                    {isSignIn ? 'Sign In' : 'Sign Up'}
+    }
+
+    const onChange = (event) =>{
+        setCreds({...creds, [event.target.name]:event.target.value})
+    }
+
+    return (
+        <>
+            <div> <Navbar /> </div>
+            <div className="container">
+                <form onSubmit={handleSubmit}>
+                    <div className="form-group m-3">
+                        <label htmlFor="exampleInputEmail1">Email</label>
+                        <input type="email" name="email" value={creds.email} className="form-control" aria-describedby="emailHelp" onChange={onChange} />
                     </div>
-                    <div className="card-body">
-                    <form>
-                        <div className="mb-3">
-                        <label htmlFor="email" className="form-label">
-                            Email
-                        </label>
-                        <input
-                            type="email"
-                            className="form-control"
-                            id="email"
-                            placeholder="Enter your email"
-                            required
-                        />
-                        </div>
-                        <div className="mb-3">
-                        <label htmlFor="password" className="form-label">
-                            Password
-                        </label>
-                        <input
-                            type="password"
-                            className="form-control"
-                            id="password"
-                            placeholder="Enter your password"
-                            required
-                        />
-                        </div>
-                        {!isSignIn && (
-                        <div className="mb-3">
-                            <label htmlFor="confirmPassword" className="form-label">
-                            Confirm Password
-                            </label>
-                            <input
-                            type="password"
-                            className="form-control"
-                            id="confirmPassword"
-                            placeholder="Confirm your password"
-                            required
-                            />
-                        </div>
-                        )}
-                        <button type="submit" className="btn btn-primary">
-                        {isSignIn ? 'Sign In' : 'Sign Up'}
-                        </button>
-                    </form>
+                    <div className="form-group m-3">
+                        <label htmlFor="exampleInputPassword1">Password</label>
+                        <input type="password" name="password" value={creds.password} className="form-control" onChange={onChange} />
                     </div>
-                    <div className="card-footer">
-                    {isSignIn ? (
-                        <p>
-                        Don't have an account?{' '}
-                        <button
-                            className="btn btn-link"
-                            onClick={toggleAuthMode}
-                        >
-                            Sign Up
-                        </button>
-                        </p>
-                    ) : (
-                        <p>
-                        Already have an account?{' '}
-                        <button
-                            className="btn btn-link"
-                            onClick={toggleAuthMode}
-                        >
-                            Sign In
-                        </button>
-                        </p>
-                    )}
+                    <div className="form-group form-check m-3">
+                        <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                        <label className="form-check-label" htmlFor="exampleCheck1">Remember me</label>
                     </div>
-                </div>
-                </div>
+                    <button type="submit" className="btn btn-primary m-3">Submit</button>
+                    <Link to="/signup" className="m-3"> New User</Link>
+                </form>
             </div>
-        </div>
-        <div><Footer/></div>
-    </>
-  );
+        </>
+    )
 }
-
-export default Login;
 
