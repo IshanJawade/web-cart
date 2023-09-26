@@ -12,13 +12,13 @@ export default function Carousel() {
                         </form>
                     </div>
                     <div className="carousel-item active">
-                        <img className="d-block w-100" style={{ filter: "brightness(60%)" }} src="https://source.unsplash.com/random/1920x800/?art" alt="First slide" />
+                        <img className="d-block w-100" style={{ filter: "brightness(60%)" }} src="https://source.unsplash.com/random/1920x800/?galaxy" alt="First slide" />
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" style={{ filter: "brightness(60%)" }} src="https://source.unsplash.com/random/1920x800/?burger" alt="Second slide" />
+                        <img className="d-block w-100" style={{ filter: "brightness(60%)" }} src="https://source.unsplash.com/random/1920x800/?artist" alt="Second slide" />
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" style={{ filter: "brightness(60%)" }} src="https://source.unsplash.com/random/1920x800/?noodles" alt="Third slide" />
+                        <img className="d-block w-100" style={{ filter: "brightness(60%)" }} src="https://source.unsplash.com/random/1920x800/?art" alt="Third slide" />
                     </div>
                 </div>
 

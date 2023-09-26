@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 
 export default function Signup() {
 
     const [creds, setCreds] = useState({name:"", email:"", password:"", location:""});
-
+    const navigate = useNavigate();
     const handleSubmit = async (e) => {
         e.preventDefault();
         const response = await fetch("http://localhost:5000/api/signup", {
@@ -20,6 +20,10 @@ export default function Signup() {
 
         if(!json.success){
             alert("Enter Valid Credentials")
+        }
+
+        if(json.success){
+            navigate("/login");
         }
 
     }

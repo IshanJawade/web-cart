@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoURI = "mongodb+srv://ishankjawade:MacBookPro2019@cluster0.kgxjnd5.mongodb.net/webcart?retryWrites=true&w=majority";
+const mongoURI = "mongodb+srv://ishankjawade:MacBookPro2019@cluster0.kgxjnd5.mongodb.net/webkart?retryWrites=true&w=majority";
 
 
 const mongoDB = async () => {
@@ -7,7 +7,7 @@ const mongoDB = async () => {
         {useNewUrlParser: true}, async (err, result) => {
             if(err) console.log(err)
             else {
-                console.log("Database connected");
+                console.log("MongoDB connected");
                 const fetched_data = mongoose.connection.db.collection("users");
                 fetched_data.find({}).toArray(function (err, data){
                     if(err) console.log(err);

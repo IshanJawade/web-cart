@@ -5,7 +5,7 @@ export default function Navbar() {
     <>
     <nav className="navbar navbar-expand-lg navbar bg-primary" data-bs-theme="dark">
         <div className="container-fluid">
-          <Link className="navbar-brand fs-1" to="/">WebkART</Link>
+          <Link className="navbar-brand fs-1" to="/">webkART</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
