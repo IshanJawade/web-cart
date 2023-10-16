@@ -3,49 +3,43 @@
   "email": "ishanjawade@gmail.com",
   "password": "ishan@9890",
   "location": "Hadapsar, Pune, India"
-}
-
+},
 {
   "name": "Rushikesh Jadhav",
   "email": "just.jadhav@gmail.com",
   "password": "justincase@8.5",
   "location": "Katraj, Pune, India"
-}
-
+},
 {
   "name": "Pratik Kakade",
   "email": "pratikkakade@gmail.com",
   "password": "something@pandy",
   "location": "Syracuse, NY, USA"
-}
-
+},
 {
   "name": "Ameya Kale",
   "email": "ameyakale@gmail.com",
   "password": "bhavika@1234",
   "location": "Syracuse, NY, USA"
-}
-
+},
 {
   "name": "Ayushi Mohkar",
   "email": "ayushimohkar@gmail.com",
   "password": "ayushi@25",
   "location": "Matunga, Mumbai, India"
-}
-
+},
 {
   "name": "Advait Jawade",
   "email": "advaitjawade@gmail.com",
   "password": "puppy@500",
   "location": "Hadapsar, Pune, India"
-}
-
+},
 {
   "name": "Ashwini Jawade",
   "email": "ashwinijawade@testemail.com",
   "password": "ashwini@12345",
   "location": "Hadapsar, Pune, India"
-}
+},
 {
   "name": "Abhijeet Mugal",
   "email": "abhijeet.mugal@gmail.com",

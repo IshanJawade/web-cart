@@ -20,6 +20,7 @@ mongoDB();
 // Roite declaration for login signup operations
 app.use(express.json());
 app.use('/api', require("./Routes/loginSignup"));
+app.use('/api', require("./Routes/DisplayData"));
 
 app.get('/', (req, res) => {
     res.send('Backend server is running here for Webcart')
