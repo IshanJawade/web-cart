@@ -21,6 +21,8 @@ mongoDB();
 app.use(express.json());
 app.use('/api', require("./Routes/loginSignup"));
 app.use('/api', require("./Routes/DisplayData"));
+app.use('/api', require("./Routes/DisplayBlogs"));
+
 
 app.get('/', (req, res) => {
     res.send('Backend server is running here for Webcart')
