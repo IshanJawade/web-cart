@@ -41,7 +41,7 @@ export default function Home() {
               </div>
             </div>
             <div className="carousel-item active">
-              <img className="d-block w-100" style={{ filter: "brightness(60%)" }} src="https://source.unsplash.com/random/1920x800/?food" alt="First slide" />
+              <img className="d-block w-100" style={{ filter: "brightness(60%)" }} src="https://source.unsplash.com/random/1920x800/?Art" alt="First slide" />
             </div>
             <div className="carousel-item">
               <img className="d-block w-100" style={{ filter: "brightness(60%)" }} src="https://source.unsplash.com/random/1920x800/?burger" alt="Second slide" />
