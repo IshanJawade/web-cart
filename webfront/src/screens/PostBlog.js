@@ -24,7 +24,7 @@ export default function PostBlog(){
 
         if(json.success){
             alert("Blog Posted successfully")
-            navigate("/blog");
+            navigate("/blogs");
         }
 
     }
